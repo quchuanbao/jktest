@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+     ServerAdmin zig@php5
+     ServerName house.com
+     DocumentRoot "d:/web/house/app"
+     <Directory "d:/web/house/app">
+		Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+		RewriteEngine on
+		RewriteCond %{REQUEST_FILENAME} !-f  
+		RewriteCond %{REQUEST_FILENAME} !-d 
+		RewriteRule . index.php
+     </Directory>
+</VirtualHost>
+
+http://www.yiiframework.com/extension/kindeditor#hh3

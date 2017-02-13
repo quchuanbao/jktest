@@ -1,0 +1,384 @@
+/* CSS Document */
+
+/*index*/
+.main .box h2 {
+background-position:0 -408px;
+}
+.box h2 {
+background:url("../images/sprite.png") no-repeat scroll 0 -448px transparent;
+color:#193B5F;
+font-size:13px;
+height:26px;
+line-height:26px;
+overflow:hidden;
+padding:1px 11px 0;
+}
+.wlj {
+display:block;
+height:27px;
+position:absolute;
+right:15px;
+top:0;
+width:145px;
+}
+.box dl.channel {
+font-family:simsun;
+line-height:26px;
+position:absolute;
+right:6px;
+top:1px;
+}
+.box dl.channel dd {
+padding:0 5px;
+}
+.box dl.channel a {
+color:#016A9F;
+}
+.kk-index .dydsj .content {
+height:377px;
+}
+.dydsj .p1 {
+
+float:left;
+height:357px;
+margin:10px 0;
+overflow:hidden;
+width:725px;
+}
+.dydsj h4 {
+font-size:12px;
+height:16px;
+line-height:16px;
+margin-bottom:3px;
+overflow:hidden;
+padding:0 10px;
+}
+.dydsj .list-pager {
+
+top:33px;
+width:100px;
+}
+
+div.list-pager {
+position:absolute;
+right:11px;
+top:4px;
+}
+.pager-num  {
+margin:6px 8px 0 0;
+}
+
+.pager-num, .pager-op {
+float:left;
+}
+.pager-num a.currA, .pager-num a:hover {
+background-position:-340px -100px;
+}
+
+.pic-list_0810 a:hover, a.currA {
+background-position:left top;
+text-decoration:none;
+}
+
+.pager-num a {
+background:url("../images/sprite.png") no-repeat scroll -340px -110px transparent;
+float:left;
+height:6px;
+margin-left:5px;
+overflow:hidden;
+text-indent:-9999px;
+width:6px;
+}
+.pager-num, .pager-op {
+float:left;
+}
+.pager-op a.no-page-up, .pager-op a.page-up {
+background-position:-300px -100px;
+}
+
+.pager-op a {
+background:url("../images/sprite.png") no-repeat scroll 0 0 transparent;
+float:left;
+height:18px;
+overflow:hidden;
+text-indent:-9999px;
+width:18px;
+}
+.pager-op a.no-page-down, .pager-op a.page-down {
+background-position:-277px -100px;
+margin-left:-1px;
+}
+
+.pager-op a {
+background:url("../images/sprite.png") no-repeat scroll 0 0 transparent;
+float:left;
+height:18px;
+overflow:hidden;
+text-indent:-9999px;
+width:18px;
+}
+.dydsj .movList, .dydsj .movList ul {
+height:338px;
+}
+.dydsj .movList li {
+margin:0 10px 10px;
+}
+.hover_bg  {
+background:url("../images/update.png") no-repeat scroll 0 0 transparent;
+}
+
+.hover_bg, .hover_bg_txt {
+color:#FFFFFF;
+height:15px;
+left:7px;
+line-height:15px;
+padding:0 3px;
+position:absolute;
+text-align:right;
+top:109px;
+width:80px;
+}
+.dydsj .p2 {
+float:left;
+height:357px;
+margin:10px 0;
+overflow:hidden;
+width:384px;
+}
+.dydsj .movList2, .dydsj .movList2 ul {
+height:133px;
+}
+.dydsj .movList2, .dydsj .movList2 ul {
+height:133px;
+}
+
+.movList2 ul {
+height:123px;
+overflow:hidden;
+position:relative;
+}
+.movList2 li {
+color:#939393;
+display:inline;
+float:left;
+height:123px;
+margin:0 10px 10px;
+overflow:hidden;
+position:relative;
+width:108px;
+}
+.movList2 li {
+color:#939393;
+display:inline;
+float:left;
+height:123px;
+margin:0 10px 10px;
+overflow:hidden;
+position:relative;
+width:108px;
+}
+.movList2 li .playpic img {
+height:60px;
+width:102px;
+}
+.movList2 li .mov-title {
+height:18px;
+position:relative;
+}
+
+.movList2 li p {
+height:36px;
+line-height:18px;
+overflow:hidden;
+}
+.movList2 li p {
+height:36px;
+line-height:18px;
+overflow:hidden;
+}
+.txt_tag {
+background:none repeat scroll 0 0 #F2F2F3;
+border:1px solid #E0E0E0;
+color:#D2D2D2;
+line-height:20px;
+margin:0 10px;
+padding:5px 10px;
+}
+.txt_tag p span {
+color:#717171;
+font-weight:bold;
+}
+.txt_tag p a {
+margin:0 5px;
+}
+.sideR {
+clear:right;
+float:right;
+width:226px;
+}
+.sideR .box h2 {
+background-position:0 -248px;
+}
+.kk-index .rank .content {
+height:377px;
+}
+
+.sideR .upBox {
+display:block;
+}
+.rank .sort-list {
+padding:0 10px;
+}
+
+.sort-list {
+line-height:16px;
+padding:5px 10px;
+}
+.sort-list li {
+height:16px;
+margin-bottom:3px;
+overflow:hidden;
+padding:3px 32px 0 16px;
+position:relative;
+}
+.sort-list .top em {
+color:#FF5B01;
+}
+
+.sort-list em {
+font-size:10px;
+font-style:normal;
+left:0;
+position:absolute;
+top:3px;
+}
+.sort-list li a.playMov {
+background:url("../images/sprite.png") no-repeat scroll -808px -32px transparent;
+display:inline-block;
+height:16px;
+top:3px;
+vertical-align:middle;
+width:16px;
+}
+.sort-list span {
+color:#939393;
+white-space:nowrap;
+}
+.sort-list .score {
+color:#FF5B01;
+font-size:10px;
+font-weight:bold;
+position:absolute;
+right:0;
+top:3px;
+}
+
+.sort-list span {
+color:#939393;
+white-space:nowrap;
+}
+.sort-list .score strong {
+font-size:12px;
+}
+.banner-middle, .banner-little {
+clear:both;
+font-size:0;
+line-height:0;
+margin:0 auto 8px;
+overflow:hidden;
+position:relative;
+width:960px;
+}
+.spkb .channel dd {
+color:#016A9F;
+}
+.spkb .channel dd a {
+margin:0 3px;
+}
+.spkb .channel dd a.more {
+margin:0 3px 0 15px;
+}
+.spkb .video_list {
+padding-top:13px;
+}
+
+.video_list {
+padding:20px 0 0;
+}
+.spkb .video_list li {
+height:148px;
+margin:0 0 0 14px;
+padding:0;
+width:128px;
+}
+
+.video_list li {
+display:inline;
+float:left;
+height:150px;
+overflow:hidden;
+padding:0 12px 15px;
+width:128px;
+}
+.video_list li img {
+display:block;
+height:96px;
+margin-bottom:5px;
+overflow:hidden;
+width:128px;
+}
+.spkb .video_list li .video_list_tt {
+height:16px;
+line-height:16px;
+overflow:hidden;
+width:128px;
+}
+
+.video_list li .video_list_tt {
+line-height:16px;
+overflow:hidden;
+width:135px;
+}
+.video_list li .vnum {
+line-height:14px;
+margin-top:3px;
+position:relative;
+}
+
+.vnum {
+color:#999999;
+line-height:14px;
+}
+.video_list li .vnum span {
+display:block;
+}
+.vnum em {
+color:#5B5B5B;
+font-size:10px;
+font-style:normal;
+}
+.video_list li .vnum span.pl {
+bottom:1px;
+height:13px;
+overflow:hidden;
+position:absolute;
+right:0;
+}
+.rm24 .content {
+height:161px;
+}
+.rm24 .sort-list li {
+margin-bottom:7px;
+padding:3px 0 0 16px;
+width:179px;
+}
+.rm24 .sort-list li a {
+display:block;
+overflow:hidden;
+white-space:nowrap;
+width:179px;
+}
+
+
+/*index*/
+

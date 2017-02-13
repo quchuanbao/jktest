@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--[if IE 9 ]><html lang="zh-CN" class="ie9"><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>西路家</title>
+
+        <!-- Material design colors -->
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+
+        <!-- CSS animations -->
+        <link rel="stylesheet" href="vendors/bower_components/animate.css/animate.min.css">
+
+        <!-- Site -->
+        <link rel="stylesheet" href="css/app_1.css">
+        <link rel="stylesheet" href="css/app_2.css">
+
+        <!-- Page Loader JS -->
+        <script src="js/page-loader.min.js" async></script>
+    </head>
+
+    <body>
+        <!-- Start page loader -->
+        <div id="page-loader">
+            <div class="page-loader__spinner"></div>
+        </div>
+        <!-- End page loader -->
+
+        <header id="header">
+            <div class="header__top">
+                <div class="container">
+                    <ul class="top-nav">
+                        <li class="dropdown top-nav__guest">
+                            <a data-toggle="dropdown" href="">注册</a>
+
+                            <form class="dropdown-menu stop-propagate">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="手机号">
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="密码">
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="确认密码">
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                                <p><small>同意西路家用户注册 <a href="">服务条款</a>.</small></p>
+
+                                <button class="btn btn-primary btn-block m-t-10 m-b-10">注册</button>
+
+                                <div class="text-center"><small><a href="">已有注册账号?</a></small></div>
+
+                                <div class="top-nav__auth">
+                                    <span>or</span>
+
+                                    <div>用以下方式注册</div>
+
+                                    <a href="" class="mdc-bg-blue-500">
+                                        <i class="zmdi zmdi-facebook"></i>
+                                    </a>
+
+                                    <a href="" class="mdc-bg-cyan-500">
+                                        <i class="zmdi zmdi-twitter"></i>
+                                    </a>
+
+                                    <a href="" class="mdc-bg-red-400">
+                                        <i class="zmdi zmdi-google"></i>
+                                    </a>
+                                </div>
+
+                            </form>
+                        </li>
+
+                        <li class="dropdown top-nav__guest">
+                            <a data-toggle="dropdown" href="" data-rmd-action="switch-login">登录</a>
+
+                            <div class="dropdown-menu">
+                                <div class="tab-content">
+                                    <form class="tab-pane active in fade" id="top-nav-login">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="手机号">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="密码">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+
+                                        <button class="btn btn-primary btn-block m-t-10 m-b-10">登录</button>
+
+                                        <div class="text-center">
+                                            <a href="#top-nav-forgot-password" data-toggle="tab"><small>忘记密码?</small></a>
+                                        </div>
+
+                                        <div class="top-nav__auth">
+                                            <span>or</span>
+
+                                            <div>用以下方式登录</div>
+
+                                            <a href="" class="mdc-bg-blue-500">
+                                                <i class="zmdi zmdi-facebook"></i>
+                                            </a>
+
+                                            <a href="" class="mdc-bg-cyan-500">
+                                                <i class="zmdi zmdi-twitter"></i>
+                                            </a>
+
+                                            <a href="" class="mdc-bg-red-400">
+                                                <i class="zmdi zmdi-google"></i>
+                                            </a>
+                                        </div>
+                                    </form>
+
+                                    <form class="tab-pane fade forgot-password" id="top-nav-forgot-password">
+                                        <a href="#top-nav-login" class="top-nav__back" data-toggle="tab"></a>
+
+                                        <p>请输入手机号找回密码</p>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="手机号">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+
+                                        <button class="btn btn-warning btn-block">找回密码</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="pull-right top-nav__icon">
+                            <a href=""><i class="zmdi zmdi-facebook"></i></a>
+                        </li>
+                        <li class="pull-right top-nav__icon">
+                            <a href=""><i class="zmdi zmdi-twitter"></i></a>
+                        </li>
+                        <li class="pull-right top-nav__icon">
+                            <a href=""><i class="zmdi zmdi-google"></i></a>
+                        </li>
+
+                        <li class="pull-right hidden-xs"><span><i class="zmdi zmdi-email"></i>hello@xilujia.com</span></li>
+                        <li class="pull-right hidden-xs"><span><i class="zmdi zmdi-phone"></i>400-888-888</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header__main">
+                <div class="container">
+                    <a class="logo" href="index.html">
+                        <img src="img/logo.png" alt="">
+                        <div class="logo__text">
+                            <span>西路家</span>
+                            <span>提供海外旅游/投资/留学等一站式综合服务</span>
+                        </div>
+                    </a>
+
+                    <div class="navigation-trigger visible-xs visible-sm" data-rmd-action="block-open" data-rmd-target=".navigation">
+                        <i class="zmdi zmdi-menu"></i>
+                    </div>
+
+                    <ul class="navigation">
+                        <li class="visible-xs visible-sm"><a class="navigation__close" data-rmd-action="navigation-close" href=""><i class="zmdi zmdi-long-arrow-right"></i></a></li>
+
+                        <li class="active navigation__dropdown">
+                            <a href="index.html">首页</a>
+                        </li>
+
+                        <li class="navigation__dropdown">
+                            <a href="" class="prevent-default">旅游</a>
+
+                            <ul class="navigation__drop-menu">
+                                <ul class="navigation__drop-menu">
+                                    <li><a href="#">欧洲</a></li>
+                                    <li><a href="#">北美</a></li>
+                                    <li><a href="#">大洋洲</a></li>
+                                    <li><a href="#">非洲</a></li>
+                                    <li><a href="#">亚洲</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+
+
+                        <li class="navigation__dropdown">
+                            <a href="" class="prevent-default">移民</a>
+
+                            <ul class="navigation__drop-menu">
+                                <ul class="navigation__drop-menu">
+                                    <li><a href="#">热门国家</a></li>
+                                    <li><a href="#">移民宝典</a></li>
+                                    <li><a href="#">成功案例</a></li>
+                                    <li><a href="#">移民费用</a></li>
+                                    <li><a href="#">移民服务</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="navigation__dropdown">
+                            <a href="mortgage.html">投资</a>
+
+                            <ul class="navigation__drop-menu">
+                                <li><a href="#">全球房产</a></li>
+                                <li><a href="#">投资房产</a></li>
+                                <li><a href="#">移民房产</a></li>
+                                <li><a href="#">学区房产</a></li>
+                                <li><a href="#">豪宅</a></li>
+                                <li><a href="#">投资服务</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="navigation__dropdown">
+                            <a href="agents.html">留学</a>
+
+                            <ul class="navigation__drop-menu">
+                                <li><a href="#">留学咨询</a></li>
+                                <li><a href="#">留学费用</a></li>
+                                <li><a href="#">院校专业</a></li>
+                                <li><a href="#">大学排行</a></li>
+                                <li><a href="#">申请条件</a></li>
+                                <li><a href="#">签证办理</a></li>
+                                <li><a href="#">留学服务</a></li>
+                            </ul>
+                        </li>
+                        <li class="navigation__dropdown">
+                            <a href="agents.html">特产</a>
+
+                            <ul class="navigation__drop-menu">
+                                <li><a href="#">地方美食</a></li>
+                                <li><a href="#">纪念品</a></li>
+                                <li><a href="#">特色服饰</a></li>
+                                <li><a href="#">其他特产</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="navigation__dropdown">
+                            <a href="" class="prevent-default">更多服务</a>
+
+                            <ul class="navigation__drop-menu navigation__drop-menu--right">
+                                <li><a href="#">企业合作</a></li>
+                                <li><a href="#">一对一咨询服务</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="action-header">
+            <div class="container">
+                <div class="action-header__item action-header__item--search">
+                    <form>
+                        <input type="text" class="hidden-sm hidden-xs" placeholder="请输入目的地/城市/国家等"><!-- For desktop -->
+                        <input type="text" class="visible-xs visible-sm" placeholder="Search..."><!-- For desktop -->
+                    </form>
+                </div>
+
+                <div class="action-header__item action-header__item--tags hidden-xs">
+                    <a href="">纽约</a>
+                    <a href="">华盛顿</a>
+                    <a href="">多伦多</a>
+                    <a href="" class="hidden-sm">新西兰</a>
+                    <a href="" class="hidden-sm">澳大利亚</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <header class="section__title">
+                    <h2>2017最新移民政策发展趋势全汇总</h2>
+                    <small>来源: 西路家  2017.02.16</small>
+
+
+                </header>
+
+                <div class="row">
+                    <div class="col-md-8 col-sm-7">
+                        <article class="card blog">
+                            <div class="card__img">
+                                <img src="img/demo/blog/1.jpg" alt="">
+                            </div>
+                            <div class="card__body">
+                                <p class="lead">2017最新移民政策发展趋势全汇总.</p>
+
+                                <p>2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总.</p>
+                                <p>2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总</p>
+                                <p>2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总.</p>
+                                <p>2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总</p>
+                                <p>2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总2017最新移民政策发展趋势全汇总</p>
+                            </div>
+
+                            <div class="blog__tags">
+                                <a href="" class="tags-list__item">移民政策</a>
+                                <a href="" class="tags-list__item">留学政策</a>
+                                <a href="" class="tags-list__item">投资政策</a>
+                                <a href="" class="tags-list__item">旅游咨询</a>
+                            </div>
+
+                            <div class="blog__arthur">
+                                <div class="blog__arthur-img">
+                                    <img src="img/demo/people/8.jpg" alt="">
+                                </div>
+                                <div class="blog__arthur-contents">
+                                    <h2>王小花</h2>
+                                    <p>王小花是个好同志.王小花是个好同志.王小花是个好同志.王小花是个好同志.王小花是个好同志.王小花是个好同志.王小花是个好同志.王小花是个好同志.王小花是个好同志.王小花是个好同志.</p>
+
+                                    <div class="blog__arthur-social">
+                                        <a href="" class="mdc-bg-indigo-500"><i class="zmdi zmdi-facebook"></i></a>
+                                        <a href="" class="mdc-bg-cyan-500"><i class="zmdi zmdi-twitter"></i></a>
+                                        <a href="" class="mdc-bg-red-400"><i class="zmdi zmdi-google"></i></a>
+                                        <a href="" class="mdc-bg-blue-600"><i class="zmdi zmdi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+
+
+                    </div>
+
+                    <aside class="col-sm-4 col-sm-5 hidden-xs">
+
+
+                        <form class="card hidden-print">
+                            <div class="card__header">
+                                <h2>西路家专业顾问</h2>
+                                <small>来电咨询西路家专业顾问或在线咨询</small>
+                            </div>
+
+                            <div class="card__body" >
+                                <div class="inquire__number">
+                                    <i class="zmdi zmdi-phone"></i>
+                                    400-8888-888
+                                </div>
+
+                                <div class="form-group form-group--float">
+                                    <input type="text" class="form-control" placeholder="姓名">
+                                    <i class="form-group__bar"></i>
+                                </div>
+                                <div class="form-group form-group--float">
+                                    <input type="text" class="form-control" placeholder="电话">
+
+                                    <i class="form-group__bar"></i>
+                                </div>
+                                <div class="form-group form-group--float">
+                                    <textarea class="form-control textarea-autoheight" placeholder="留言咨询" ></textarea>
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                                <small class="text-muted">西路家收到您的留言后将在1-2小时联系您!</small>
+                            </div>
+
+                            <div class="card__footer">
+                                <button type="submit" class="btn btn-primary">提交咨询</button>
+                                <button class="btn btn-link hidden-lg hidden-md" data-rmd-action="block-close" data-rmd-target="#inquire">Cancel</button>
+                            </div>
+                        </form>
+
+
+                        <div class="card hidden-xs hidden-sm hidden-print">
+                            <div class="card__header">
+                                <h2>西路家专业顾问</h2>
+                                <small>100+专业顾问为您提供1V1全方位咨询服务</small>
+                            </div>
+                            <div class="list-group">
+                                <a class="list-group-item media" href="">
+                                    <div class="pull-left">
+                                        <img src="img/demo/people/1.jpg" alt="" class="list-group__img img-circle" width="65" height="65">
+                                    </div>
+                                    <div class="media-body list-group__text">
+                                        <strong>王小花</strong>
+                                        <small class="list-group__text">13888888888</small>
+                                        <div class="rmd-rate" data-rate-value="5" data-rate-readonly="true"></div>
+                                    </div>
+                                </a>
+
+                                <a class="list-group-item media" href="">
+                                    <div class="pull-left">
+                                        <img src="img/demo/people/3.jpg" alt="" class="list-group__img img-circle" width="65" height="65">
+                                    </div>
+                                    <div class="media-body list-group__text">
+                                        <strong>王大花</strong>
+                                        <small class="list-group__text">13888888888</small>
+                                        <div class="rmd-rate" data-rate-value="5" data-rate-readonly="true"></div>
+                                    </div>
+                                </a>
+                                <a class="list-group-item media" href="">
+                                    <div class="pull-left">
+                                        <img src="img/demo/people/1.jpg" alt="" class="list-group__img img-circle" width="65" height="65">
+                                    </div>
+                                    <div class="media-body list-group__text">
+                                        <strong>王小花</strong>
+                                        <small class="list-group__text">13888888888</small>
+                                        <div class="rmd-rate" data-rate-value="5" data-rate-readonly="true"></div>
+                                    </div>
+                                </a>
+
+                                <a class="list-group-item media" href="">
+                                    <div class="pull-left">
+                                        <img src="img/demo/people/3.jpg" alt="" class="list-group__img img-circle" width="65" height="65">
+                                    </div>
+                                    <div class="media-body list-group__text">
+                                        <strong>王大花</strong>
+                                        <small class="list-group__text">13888888888</small>
+                                        <div class="rmd-rate" data-rate-value="5" data-rate-readonly="true"></div>
+                                    </div>
+                                </a>
+                                <a class="list-group-item media" href="">
+                                    <div class="pull-left">
+                                        <img src="img/demo/people/1.jpg" alt="" class="list-group__img img-circle" width="65" height="65">
+                                    </div>
+                                    <div class="media-body list-group__text">
+                                        <strong>王小花</strong>
+                                        <small class="list-group__text">13888888888</small>
+                                        <div class="rmd-rate" data-rate-value="5" data-rate-readonly="true"></div>
+                                    </div>
+                                </a>
+
+                                <a class="view-more" style="padding: 5px 0px 0px 0px;" href="#">
+                                    更多专业顾问 <i class="zmdi zmdi-long-arrow-right"></i>
+                                </a>
+                                <div class="p-10"></div>
+                            </div>
+                        </div>
+
+
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="container hidden-xs">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="footer__block">
+                            <a class="logo clearfix" href="">
+                                <div class="logo__text">
+                                    <span>西路家</span>
+                                    <span>提供海外旅游/投资/留学等一站式综合服务</span>
+                                </div>
+                            </a>
+
+                            <address class="m-t-20 m-b-20 f-14">
+                                北京市朝阳区广渠路首城国际B座
+                            </address>
+
+                            <div class="f-20">010-68888888</div>
+                            <div class="f-14 m-t-5">hello@Xilujix.com / kefu@Xilujia.com</div>
+
+                            <!--<div class="f-20 m-t-20">-->
+                            <!--<a href="" class="m-r-10"><i class="zmdi zmdi-google"></i></a>-->
+                            <!--<a href="" class="m-r-10"><i class="zmdi zmdi-facebook"></i></a>-->
+                            <!--<a href=""><i class="zmdi zmdi-twitter"></i></a>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer__block footer__block--blog">
+                            <div class="footer__title">西路家服务</div>
+
+                            <a href="">
+                                企业采购大客户咨询
+                                <small>服务时间: 早9:00 - 晚22:00</small>
+                            </a>
+                            <a href="">
+                                团购入口
+                                <small>服务时间: 早9:00 - 晚22:00</small>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer__block">
+                            <div class="footer__title">西路家简介</div>
+
+                            <div style="line-height: 30px;font-size: 14px;">西路家是国内最早海外旅游/投资/移民/留学/特产买卖/一站式服务提供商.西路家为您提供精英服务,西路家为您提供精英服务,西路家为您提供精英服务,西路家为您提供精英服务.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="container">
+                    <span class="footer__copyright">© 2017西路家版权所有</span>
+
+                    <a href="">关于我们</a>
+                    <a href="">商务合作</a>
+                    <a href="">企业合作</a>
+                    <a href="">招聘信息</a>
+                    <a href="">意见反馈</a>
+                </div>
+
+                <div class="footer__to-top" data-rmd-action="scroll-to" data-rmd-target="html">
+                    <i class="zmdi zmdi-chevron-up"></i>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Older IE warning message -->
+        <!--[if lt IE 9]>
+        <div class="ie-warning">
+            <h1>Warning!!</h1>
+            <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+            <div class="ie-warning__inner">
+                <ul class="ie-warning__download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="img/browsers/chrome.png" alt="">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="img/browsers/firefox.png" alt="">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="img/browsers/safari.png" alt="">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                            <div>IE (New)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sorry for the inconvenience!</p>
+        </div>
+        <![endif]-->
+
+
+        <!-- Javascript -->
+
+        <!-- jQuery -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Waves button ripple effects -->
+        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+
+        <!-- Autosize - Auto height textarea -->
+        <script src="vendors/bower_components/autosize/dist/autosize.min.js"></script>
+
+        <!-- rateYo - Ratings -->
+        <script src="vendors/bower_components/rateYo/src/jquery.rateyo.js"></script>
+
+        <!-- jsSocials - Social link sharing -->
+        <script src="vendors/bower_components/jssocials/dist/jssocials.min.js"></script>
+
+        <!-- IE9 Placeholder -->
+        <!--[if IE 9 ]>
+        <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <!-- Site functions and actions -->
+        <script src="js/app.min.js"></script>
+
+        <!-- Demo only -->
+        <script src="js/demo/demo.js"></script>
+    </body>
+</html>
