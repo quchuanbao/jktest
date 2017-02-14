@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--[if IE 9 ]><html lang="zh-CN" class="ie9"><![endif]-->
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>西路家</title>
+
+    <!-- Vendors -->
+
+    <!-- Material design colors -->
+    <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- CSS animations -->
+    <link rel="stylesheet" href="vendors/bower_components/animate.css/animate.min.css">
+
+    <!-- Select2 - Custom Selects -->
+    <link rel="stylesheet" href="vendors/bower_components/select2/dist/css/select2.min.css">
+
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="vendors/bower_components/slick-carousel/slick/slick.css">
+
+    <!-- NoUiSlider - Input Slider -->
+    <link rel="stylesheet" href="vendors/bower_components/nouislider/distribute/nouislider.min.css">
+
+    <!-- Site -->
+    <link rel="stylesheet" href="css/app_1.css">
+    <link rel="stylesheet" href="css/app_2.css">
+
+    <!-- Page Loader JS -->
+    <script src="js/page-loader.min.js" async></script>
+</head>
+
+    <body>
+        <!-- Start page loader -->
+        <div id="page-loader">
+            <div class="page-loader__spinner"></div>
+        </div>
+        <!-- End page loader -->
+
+
+
+
+        <header id="header">
+            <div class="header__top">
+                <div class="container">
+                    <ul class="top-nav">
+                        <li class="dropdown top-nav__guest">
+                            <a data-toggle="dropdown" href="">注册</a>
+
+                            <form class="dropdown-menu stop-propagate">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="手机号">
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="密码">
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="确认密码">
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                                <p><small>同意西路家用户注册 <a href="">服务条款</a>.</small></p>
+
+                                <button class="btn btn-primary btn-block m-t-10 m-b-10">注册</button>
+
+                                <div class="text-center"><small><a href="">已有注册账号?</a></small></div>
+
+                                <div class="top-nav__auth">
+                                    <span>or</span>
+
+                                    <div>用以下方式注册</div>
+
+                                    <a href="" class="mdc-bg-blue-500">
+                                        <i class="zmdi zmdi-facebook"></i>
+                                    </a>
+
+                                    <a href="" class="mdc-bg-cyan-500">
+                                        <i class="zmdi zmdi-twitter"></i>
+                                    </a>
+
+                                    <a href="" class="mdc-bg-red-400">
+                                        <i class="zmdi zmdi-google"></i>
+                                    </a>
+                                </div>
+
+                            </form>
+                        </li>
+
+                        <li class="dropdown top-nav__guest">
+                            <a data-toggle="dropdown" href="" data-rmd-action="switch-login">登录</a>
+
+                            <div class="dropdown-menu">
+                                <div class="tab-content">
+                                    <form class="tab-pane active in fade" id="top-nav-login">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="手机号">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="密码">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+
+                                        <button class="btn btn-primary btn-block m-t-10 m-b-10">登录</button>
+
+                                        <div class="text-center">
+                                            <a href="#top-nav-forgot-password" data-toggle="tab"><small>忘记密码?</small></a>
+                                        </div>
+
+                                        <div class="top-nav__auth">
+                                            <span>or</span>
+
+                                            <div>用以下方式登录</div>
+
+                                            <a href="" class="mdc-bg-blue-500">
+                                                <i class="zmdi zmdi-facebook"></i>
+                                            </a>
+
+                                            <a href="" class="mdc-bg-cyan-500">
+                                                <i class="zmdi zmdi-twitter"></i>
+                                            </a>
+
+                                            <a href="" class="mdc-bg-red-400">
+                                                <i class="zmdi zmdi-google"></i>
+                                            </a>
+                                        </div>
+                                    </form>
+
+                                    <form class="tab-pane fade forgot-password" id="top-nav-forgot-password">
+                                        <a href="#top-nav-login" class="top-nav__back" data-toggle="tab"></a>
+
+                                        <p>请输入手机号找回密码</p>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="手机号">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+
+                                        <button class="btn btn-warning btn-block">找回密码</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="pull-right top-nav__icon">
+                            <a href=""><i class="zmdi zmdi-facebook"></i></a>
+                        </li>
+                        <li class="pull-right top-nav__icon">
+                            <a href=""><i class="zmdi zmdi-twitter"></i></a>
+                        </li>
+                        <li class="pull-right top-nav__icon">
+                            <a href=""><i class="zmdi zmdi-google"></i></a>
+                        </li>
+
+                        <li class="pull-right hidden-xs"><span><i class="zmdi zmdi-email"></i>hello@xilujia.com</span></li>
+                        <li class="pull-right hidden-xs"><span><i class="zmdi zmdi-phone"></i>400-888-888</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header__main" style="padding: 32px 0 10px 0;">
+                <div class="container">
+                    <a class="logo" href="index.html">
+                        <img src="img/logo.png" alt="">
+                        <div class="logo__text">
+                            <span>西路家</span>
+                            <span>提供海外旅游/投资/留学等一站式综合服务</span>
+                        </div>
+                    </a>
+
+                    <div class="navigation-trigger visible-xs visible-sm" data-rmd-action="block-open" data-rmd-target=".navigation">
+                        <i class="zmdi zmdi-menu"></i>
+                    </div>
+
+                    <ul class="navigation">
+                        <li class="visible-xs visible-sm"><a class="navigation__close" data-rmd-action="navigation-close" href=""><i class="zmdi zmdi-long-arrow-right"></i></a></li>
+
+                        <li class="active navigation__dropdown">
+                            <a href="index.html">首页</a>
+                        </li>
+
+                        <li class="navigation__dropdown">
+                            <a href="" class="prevent-default">旅游</a>
+
+                            <ul class="navigation__drop-menu">
+                                <ul class="navigation__drop-menu">
+                                    <li><a href="#">欧洲</a></li>
+                                    <li><a href="#">北美</a></li>
+                                    <li><a href="#">大洋洲</a></li>
+                                    <li><a href="#">非洲</a></li>
+                                    <li><a href="#">亚洲</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+
+
+                        <li class="navigation__dropdown">
+                            <a href="" class="prevent-default">移民</a>
+
+                            <ul class="navigation__drop-menu">
+                                <ul class="navigation__drop-menu">
+                                    <li><a href="#">热门国家</a></li>
+                                    <li><a href="#">移民宝典</a></li>
+                                    <li><a href="#">成功案例</a></li>
+                                    <li><a href="#">移民费用</a></li>
+                                    <li><a href="#">移民服务</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="navigation__dropdown">
+                            <a href="mortgage.html">投资</a>
+
+                            <ul class="navigation__drop-menu">
+                                <li><a href="#">全球房产</a></li>
+                                <li><a href="#">投资房产</a></li>
+                                <li><a href="#">移民房产</a></li>
+                                <li><a href="#">学区房产</a></li>
+                                <li><a href="#">豪宅</a></li>
+                                <li><a href="#">投资服务</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="navigation__dropdown">
+                            <a href="agents.html">留学</a>
+
+                            <ul class="navigation__drop-menu">
+                                <li><a href="#">留学咨询</a></li>
+                                <li><a href="#">留学费用</a></li>
+                                <li><a href="#">院校专业</a></li>
+                                <li><a href="#">大学排行</a></li>
+                                <li><a href="#">申请条件</a></li>
+                                <li><a href="#">签证办理</a></li>
+                                <li><a href="#">留学服务</a></li>
+                            </ul>
+                        </li>
+                        <li class="navigation__dropdown">
+                            <a href="agents.html">特产</a>
+
+                            <ul class="navigation__drop-menu">
+                                <li><a href="#">地方美食</a></li>
+                                <li><a href="#">纪念品</a></li>
+                                <li><a href="#">特色服饰</a></li>
+                                <li><a href="#">其他特产</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="navigation__dropdown">
+                            <a href="" class="prevent-default">更多服务</a>
+
+                            <ul class="navigation__drop-menu navigation__drop-menu--right">
+                                <li><a href="#">企业合作</a></li>
+                                <li><a href="#">一对一咨询服务</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="action-header affix-top" style="background-color:#3F51B5" >
+            <div class="container">
+                <form>
+                    <div class="search" >
+                        <div class="search__type dropdown">
+                            <a href="" data-toggle="dropdown">旅游</a>
+
+                            <div class="dropdown-menu">
+                                <div>
+                                    <input type="radio" name="property-type" value="旅游">
+                                    <span>旅游</span>
+                                </div>
+                                <div>
+                                    <input type="radio" name="property-type" value="移民">
+                                    <span>移民</span>
+                                </div>
+                                <div>
+                                    <input type="radio" name="property-type" value="移民">
+                                    <span>投资</span>
+                                </div>
+                                <div>
+                                    <input type="radio" name="property-type" value="移民">
+                                    <span>留学</span>
+                                </div>
+                                <div>
+                                    <input type="radio" name="property-type" value="移民">
+                                    <span>特产</span>
+                                </div>
+                                <div>
+                                    <input type="radio" name="property-type" value="移民">
+                                    <span>其他服务</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search__body">
+                            <input type="text" class="search__input" placeholder="请输入目的地/城市/国家等" data-rmd-action="advanced-search-open">
+
+                            <div class="search__advanced">
+
+                                <div class="col-sm-6">
+                                    <div class="form-group form-group--float">
+                                        <input type="text" class="form-control" value="新西兰, 澳大利亚, 纽约">
+                                        <label>目的地</label>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>地区</label>
+
+                                        <select class="select2">
+                                            <option value="">欧洲</option>
+                                            <option value="">北美</option>
+                                            <option value="">大洋洲</option>
+                                            <option value="">非洲</option>
+                                            <option value="">亚洲</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-6">
+                                    <div class="form-group form-group--range">
+                                        <label>价格范围</label>
+                                        <div class="input-slider-values clearfix">
+                                            <div class="pull-left"><span>￥</span><span id="property-price-upper"></span></div>
+                                            <div class="pull-right"><span>￥</span><span id="property-price-lower"></span></div>
+                                        </div>
+                                        <div id="property-price-range"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group form-group--range">
+                                        <label>发布日期</label>
+                                        <div class="input-slider-values clearfix">
+                                            <div class="pull-left" id="property-area-upper"></div>
+                                            <div class="pull-right" id="property-area-lower"></div>
+                                        </div>
+                                        <div id="property-area-range"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>出行人数</label>
+                                        <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                            <label class="btn">
+                                                <input type="checkbox" name="advanced-search-beds" id="bed1">1
+                                            </label>
+                                            <label class="btn active">
+                                                <input type="checkbox" name="advanced-search-beds" id="bed2" checked>2
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" name="advanced-search-beds" id="bed3">3
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" name="advanced-search-beds" id="bed4">4
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" name="advanced-search-beds" id="bed5">4+
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>出行天数</label>
+                                        <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                            <label class="btn active">
+                                                <input type="checkbox" name="advanced-search-baths" id="bath1" checked>1
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" name="advanced-search-baths" id="bath2">2
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" name="advanced-search-baths" id="bath3">3
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" name="advanced-search-baths" id="bath4">4
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" name="advanced-search-baths" id="bath5">4+
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 m-t-10">
+                                    <button class="btn btn-primary">搜索</button>
+                                    <button class="btn btn-link" data-rmd-action="advanced-search-close">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/banner/b1.jpg" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img src="img/banner/b2.jpg" alt="First slide" >
+
+                </div>
+                <div class="item">
+                    <img src="img/banner/b3.jpg" alt="Third slide">
+                </div>
+            </div>
+        </div>
+        <section class="section" style="padding: 10px 0px 40px 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol class="carousel-indicators2 grid-widget grid-widget--listings">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active col-xs-4"><img src="img/banner/b1.jpg" width=98%"></li>
+                            <li data-target="#myCarousel" data-slide-to="1" class="col-xs-4"><img src="img/banner/b2.jpg" width=98%"></li>
+                            <li data-target="#myCarousel" data-slide-to="2" class="col-xs-4"><img src="img/banner/b3.jpg" width=98%"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding: 0px 0px 40px 0px;">
+            <div class="container">
+                <!--<header class="section__title">-->
+                    <!--<h2>8,243 Properties for Sale, Rent & Real Estate</h2>-->
+                    <!--<small>Villas, Apartments, Office Spaces and Commercial Builsings</small>-->
+                <!--</header>-->
+
+                <div class="card" >
+                    <div class="card__header card__header--minimal">
+                        <h2>春季海外梦幻旅游</h2>
+                        <small>地区: <a href="#">新西兰</a> <a href="#">澳大利亚</a> <a href="#">加拿大</a> </small>
+                    </div>
+                    <div class="row listings-grid" style="margin-right: 0px; margin-left: 0px;">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="listings-grid__item">
+                                <a href="listing-detail.html">
+                                    <div class="listings-grid__main">
+                                        <img src="img/demo/listing/thumbs/5.jpg" alt="">
+                                        <div class="listings-grid__price">￥823,000</div>
+                                    </div>
+
+                                    <div class="listings-grid__body">
+                                        <small>新西兰/10天/豪华房车</small>
+                                        <h5>全国直飞美国塞班岛10日游</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="listings-grid__item">
+                                <a href="listing-detail.html">
+                                    <div class="listings-grid__main">
+                                        <img src="img/demo/listing/thumbs/6.jpg" alt="">
+                                        <div class="listings-grid__price">￥1,120,000</div>
+                                    </div>
+
+                                    <div class="listings-grid__body">
+                                        <small>新西兰/10天/豪华房车</small>
+                                        <h5>全国直飞美国塞班岛10日游</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="listings-grid__item">
+                                <a href="listing-detail.html">
+                                    <div class="listings-grid__main">
+                                        <img src="img/demo/listing/thumbs/7.jpg" alt="">
+                                        <div class="listings-grid__price">￥3,000,000</div>
+                                    </div>
+
+                                    <div class="listings-grid__body">
+                                        <small>新西兰/10天/豪华房车</small>
+                                        <h5>全国直飞美国塞班岛10日游</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="listings-grid__item">
+                                <a href="listing-detail.html">
+                                    <div class="listings-grid__main">
+                                        <img src="img/demo/listing/thumbs/8.jpg" alt="">
+                                        <div class="listings-grid__price">￥1,175,000</div>
+                                    </div>
+
+                                    <div class="listings-grid__body">
+                                        <small>新西兰/10天/豪华房车</small>
+                                        <h5>全国直飞美国塞班岛10日游</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="listings-grid__item">
+                                <a href="listing-detail.html">
+                                    <div class="listings-grid__main">
+                                        <img src="img/demo/listing/thumbs/9.jpg" alt="">
+                                        <div class="listings-grid__price">￥2,675,000</div>
+                                    </div>
+
+                                    <div class="listings-grid__body">
+                                        <small>新西兰/10天/豪华房车</small>
+                                        <h5>全国直飞美国塞班岛10日游</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="listings-grid__item">
+                                <a href="listing-detail.html">
+                                    <div class="listings-grid__main">
+                                        <img src="img/demo/listing/thumbs/10.jpg" alt="">
+                                        <div class="listings-grid__price">￥575,000</div>
+                                    </div>
+
+                                    <div class="listings-grid__body">
+                                        <small>新西兰/10天/豪华房车</small>
+                                        <h5>全国直飞美国塞班岛10日游</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="listings-grid__item">
+                                <a href="listing-detail.html">
+                                    <div class="listings-grid__main">
+                                        <img src="img/demo/listing/thumbs/11.jpg" alt="">
+                                        <div class="listings-grid__price">￥4299,000</div>
+                                    </div>
+
+                                    <div class="listings-grid__body">
+                                        <small>新西兰/10天/豪华房车</small>
+                                        <h5>全国直飞美国塞班岛10日游</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="listings-grid__item">
+                                <a href="listing-detail.html">
+                                    <div class="listings-grid__main">
+                                        <img src="img/demo/listing/thumbs/12.jpg" alt="">
+                                        <div class="listings-grid__price">￥2,329,980</div>
+                                    </div>
+
+                                    <div class="listings-grid__body">
+                                        <small>新西兰/10天/豪华房车</small>
+                                        <h5>全国直飞美国塞班岛10日游</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <a class="view-more"  href="grid-listings.html">
+                        更多优惠旅游路线 <i class="zmdi zmdi-long-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card__header card__header--minimal">
+                                <h2>全球投资房产</h2>
+                                <small>地区: <a href="#">新西兰</a> <a href="#">澳大利亚</a> <a href="#">加拿大</a> </small>
+                            </div>
+
+                            <div class="grid-widget grid-widget--listings">
+                                <div class="col-xs-6">
+                                    <a class="grid-widget__item" href="listing-detail.html">
+                                        <img src="img/demo/listing/thumbs/9.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h3>￥3,452,000</h3>
+                                            <small>美国华盛顿dc独栋别墅</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a class="grid-widget__item" href="listing-detail.html">
+                                        <img src="img/demo/listing/thumbs/10.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h3>￥990,000</h3>
+                                            <small>美国华盛顿dc独栋别墅</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a class="grid-widget__item" href="listing-detail.html">
+                                        <img src="img/demo/listing/thumbs/11.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h3>1,500,000</h3>
+                                            <small>美国华盛顿dc独栋别墅</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a class="grid-widget__item" href="listing-detail.html">
+                                        <img src="img/demo/listing/thumbs/12.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h3>￥1,650,690</h3>
+                                            <small>美国华盛顿dc独栋别墅</small>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a class="view-more" href="grid-listings.html">
+                                更多投资服务 <i class="zmdi zmdi-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card__header card__header--minimal">
+                                <h2>热门移民城市</h2>
+                                <small>西路家提供24小时登门咨询服务,轻松办理移民</small>
+                            </div>
+
+                            <div class="grid-widget grid-widget--listings">
+                                <div class="col-xs-6">
+                                    <a class="grid-widget__item" href="listing-detail.html">
+                                        <img src="img/demo/listing/thumbs/13.jpg" class="img-responsive" alt="">
+                                        <div class="grid-widget__info">
+                                            <h3>美国移民生活</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a class="grid-widget__item" href="listing-detail.html">
+                                        <img src="img/demo/listing/thumbs/14.jpg" alt="">
+                                        <div class="grid-widget__info">
+                                            <h3>新西兰移民生活</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a class="grid-widget__item" href="listing-detail.html">
+                                        <img src="img/demo/listing/thumbs/15.jpg" alt="">
+                                        <div class="grid-widget__info">
+                                            <h3>澳大利亚移民生活</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a class="grid-widget__item" href="listing-detail.html">
+                                        <img src="img/demo/listing/thumbs/16.jpg" alt="">
+                                        <div class="grid-widget__info">
+                                            <h3>加拿大移民生活</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a class="view-more" href="grid-listings.html">
+                                更多移民资讯 <i class="zmdi zmdi-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card__header card__header--minimal">
+                                <h2>西路家全球特产</h2>
+                                <small>分类: <a href="#">地方美食</a> <a href="#">纪念品</a> <a href="#">特色服饰</a> <a href="#">其他特产</a></small>
+                            </div>
+
+                            <div class="grid-widget grid-widget--listings">
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="">
+                                        <img src="img/demo/locations/san_fransisco.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>￥100</h4>
+                                            <small>经典新西兰奶酪</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="">
+                                        <img src="img/demo/locations/san_jose.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>￥100</h4>
+                                            <small>经典新西兰奶酪</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="">
+                                        <img src="img/demo/locations/denver.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>￥100</h4>
+                                            <small>经典新西兰奶酪</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="">
+                                        <img src="img/demo/locations/san_diego.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>￥100</h4>
+                                            <small>经典新西兰奶酪</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="">
+                                        <img src="img/demo/locations/dallas.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>￥100</h4>
+                                            <small>经典新西兰奶酪</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="">
+                                        <img src="img/demo/locations/detroit.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>￥100</h4>
+                                            <small>经典新西兰奶酪</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="">
+                                        <img src="img/demo/locations/los_angeles.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>￥100</h4>
+                                            <small>经典新西兰奶酪</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="">
+                                        <img src="img/demo/locations/nashville.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>￥100</h4>
+                                            <small>经典新西兰奶酪</small>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="">
+                                        <img src="img/demo/locations/palm_bay.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>￥100</h4>
+                                            <small>经典新西兰奶酪</small>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a class="view-more" href="#">
+                                更多特产 <i class="zmdi zmdi-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card__header card__header--minimal">
+                                <h2>西路家全球精英顾问服务</h2>
+                                <small>西路家100+专业顾问为您提供1V1全方位咨询服务</small>
+                            </div>
+
+                            <div class="grid-widget grid-widget--listings">
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="agent-detail.html">
+                                        <img src="img/demo/people/1.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>王小花</h4>
+                                            <small>154 次成功咨询</small>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="agent-detail.html">
+                                        <img src="img/demo/people/2.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>王小花</h4>
+                                            <small>154 次成功咨询</small>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="agent-detail.html">
+                                        <img src="img/demo/people/3.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>王小花</h4>
+                                            <small>154 次成功咨询</small>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="agent-detail.html">
+                                        <img src="img/demo/people/4.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>王大锤</h4>
+                                            <small>154 次成功咨询</small>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="agent-detail.html">
+                                        <img src="img/demo/people/5.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>王大锤</h4>
+                                            <small>154 次成功咨询</small>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="agent-detail.html">
+                                        <img src="img/demo/people/6.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>王小花</h4>
+                                            <small>154 次成功咨询</small>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="agent-detail.html">
+                                        <img src="img/demo/people/7.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>王小花</h4>
+                                            <small>154 次成功咨询</small>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="agent-detail.html">
+                                        <img src="img/demo/people/8.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>王小花</h4>
+                                            <small>154 次成功咨询</small>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="grid-widget__item" href="agent-detail.html">
+                                        <img src="img/demo/people/9.jpg" alt="">
+
+                                        <div class="grid-widget__info">
+                                            <h4>王小花</h4>
+                                            <small>154 次成功咨询</small>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a class="view-more" href="agents.html">
+                                更多专业顾问 <i class="zmdi zmdi-long-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6 listings-list">
+                        <div class="card">
+                            <div class="card__header card__header--minimal" style="box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);margin-bottom: 1px;">
+                                <h2>最新移民资讯</h2>
+                                <small>地区: <a href="#">新西兰</a> <a href="#">澳大利亚</a> <a href="#">加拿大</a> </small>
+                            </div>
+                            <div class="listings-grid__indexitem" >
+                                <a href="listing-detail.html" class="media">
+                                    <div class="listings-grid__main pull-left index-news-list-image " >
+                                        <img src="img/demo/listing/thumbs/15.jpg" alt="">
+                                        <!--<div class="listings-grid__price">￥1,200,000</div>-->
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="listings-grid__body index_list_contents">
+                                            <h5>2017最新移民政策发展趋势全汇总</h5>
+                                            <p class="index_list_p">2016年已经接近尾声，又有不少人出于各种考虑选择了移出去。越来越多的人选择移民让孩子接受国际教育；</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="listings-grid__indexitem">
+                                <a href="listing-detail.html" class="media">
+                                    <div class="pull-left listings-grid__main index-news-list-image">
+                                        <img src="img/demo/listing/thumbs/1.jpg" alt="">
+                                        <!--<div class="listings-grid__price">￥1,175,000</div>-->
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="listings-grid__body index_list_contents">
+                                            <h5>2017最新移民政策发展趋势全汇总</h5>
+                                            <p class="index_list_p">2016年已经接近尾声，又有不少人出于各种考虑选择了移出去。越来越多的人选择移民让孩子接受国际教育；</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="listings-grid__indexitem">
+                                <a href="listing-detail.html" class="media">
+                                    <div class="pull-left listings-grid__main index-news-list-image">
+                                        <img src="img/demo/listing/thumbs/2.jpg" alt="">
+                                        <!--<div class="listings-grid__price">￥1,200,000</div>-->
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="listings-grid__body index_list_contents">
+                                            <h5>2017最新移民政策发展趋势全汇总</h5>
+                                            <p class="index_list_p">2016年已经接近尾声，又有不少人出于各种考虑选择了移出去。越来越多的人选择移民让孩子接受国际教育；</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="listings-grid__indexitem">
+                                <a href="listing-detail.html" class="media">
+                                    <div class="pull-left listings-grid__main index-news-list-image">
+                                        <img src="img/demo/listing/thumbs/3.jpg" alt="">
+                                        <!--<div class="listings-grid__price">￥910,000</div>-->
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="listings-grid__body index_list_contents">
+                                            <h5>2017最新移民政策发展趋势全汇总</h5>
+                                            <p class="index_list_p">2016年已经接近尾声，又有不少人出于各种考虑选择了移出去。越来越多的人选择移民让孩子接受国际教育；</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="view-more" href="grid-listings.html">
+                                更多移民服务 <i class="zmdi zmdi-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 listings-list">
+                        <div class="card">
+                            <div class="card__header card__header--minimal" style="box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);margin-bottom: 1px;">
+                                <h2>最新留学资讯</h2>
+                                <small>地区: <a href="#">新西兰</a> <a href="#">澳大利亚</a> <a href="#">加拿大</a> </small>
+                            </div>
+                            <div class="listings-grid__indexitem" >
+                                <a href="listing-detail.html" class="media">
+                                    <div class="listings-grid__main pull-left index-news-list-image " >
+                                        <img src="img/demo/listing/thumbs/15.jpg" alt="">
+                                        <!--<div class="listings-grid__price">￥1,200,000</div>-->
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="listings-grid__body index_list_contents">
+                                            <h5>2017最新移民政策发展趋势全汇总</h5>
+                                            <p class="index_list_p">2016年已经接近尾声，又有不少人出于各种考虑选择了移出去。越来越多的人选择移民让孩子接受国际教育；</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="listings-grid__indexitem">
+                                <a href="listing-detail.html" class="media">
+                                    <div class="pull-left listings-grid__main index-news-list-image">
+                                        <img src="img/demo/listing/thumbs/1.jpg" alt="">
+                                        <!--<div class="listings-grid__price">￥1,175,000</div>-->
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="listings-grid__body index_list_contents">
+                                            <h5>2017最新移民政策发展趋势全汇总</h5>
+                                            <p class="index_list_p">2016年已经接近尾声，又有不少人出于各种考虑选择了移出去。越来越多的人选择移民让孩子接受国际教育；</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="listings-grid__indexitem">
+                                <a href="listing-detail.html" class="media">
+                                    <div class="pull-left listings-grid__main index-news-list-image">
+                                        <img src="img/demo/listing/thumbs/2.jpg" alt="">
+                                        <!--<div class="listings-grid__price">￥1,200,000</div>-->
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="listings-grid__body index_list_contents">
+                                            <h5>2017最新移民政策发展趋势全汇总</h5>
+                                            <p class="index_list_p">2016年已经接近尾声，又有不少人出于各种考虑选择了移出去。越来越多的人选择移民让孩子接受国际教育；</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="listings-grid__indexitem">
+                                <a href="listing-detail.html" class="media">
+                                    <div class="pull-left listings-grid__main index-news-list-image">
+                                        <img src="img/demo/listing/thumbs/3.jpg" alt="">
+                                        <!--<div class="listings-grid__price">￥910,000</div>-->
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="listings-grid__body index_list_contents">
+                                            <h5>2017最新移民政策发展趋势全汇总</h5>
+                                            <p class="index_list_p">2016年已经接近尾声，又有不少人出于各种考虑选择了移出去。越来越多的人选择移民让孩子接受国际教育；</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="view-more" href="grid-listings.html">
+                                更多留学服务 <i class="zmdi zmdi-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="container hidden-xs">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="footer__block">
+                            <a class="logo clearfix" href="">
+                                <div class="logo__text">
+                                    <span>西路家</span>
+                                    <span>提供海外旅游/投资/留学等一站式综合服务</span>
+                                </div>
+                            </a>
+
+                            <address class="m-t-20 m-b-20 f-14">
+                               北京市朝阳区广渠路首城国际B座
+                            </address>
+
+                            <div class="f-20">010-68888888</div>
+                            <div class="f-14 m-t-5">hello@Xilujix.com / kefu@Xilujia.com</div>
+
+                            <!--<div class="f-20 m-t-20">-->
+                                <!--<a href="" class="m-r-10"><i class="zmdi zmdi-google"></i></a>-->
+                                <!--<a href="" class="m-r-10"><i class="zmdi zmdi-facebook"></i></a>-->
+                                <!--<a href=""><i class="zmdi zmdi-twitter"></i></a>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer__block footer__block--blog">
+                            <div class="footer__title">西路家服务</div>
+
+                            <a href="">
+                                企业采购大客户咨询
+                                <small>服务时间: 早9:00 - 晚22:00</small>
+                            </a>
+                            <a href="">
+                                团购入口
+                                <small>服务时间: 早9:00 - 晚22:00</small>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer__block">
+                            <div class="footer__title">西路家简介</div>
+
+                            <div style="line-height: 30px;font-size: 14px;">西路家是国内最早海外旅游/投资/移民/留学/特产买卖/一站式服务提供商.西路家为您提供精英服务,西路家为您提供精英服务,西路家为您提供精英服务,西路家为您提供精英服务.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="container">
+                    <span class="footer__copyright">© 2017西路家版权所有</span>
+
+                    <a href="">关于我们</a>
+                    <a href="">商务合作</a>
+                    <a href="">企业合作</a>
+                    <a href="">招聘信息</a>
+                    <a href="">意见反馈</a>
+                </div>
+
+                <div class="footer__to-top" data-rmd-action="scroll-to" data-rmd-target="html">
+                    <i class="zmdi zmdi-chevron-up"></i>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Older IE warning message -->
+        <!--[if lt IE 9]>
+            <div class="ie-warning">
+                <h1>Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                <div class="ie-warning__inner">
+                    <ul class="ie-warning__download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="img/browsers/chrome.png" alt="">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="img/browsers/firefox.png" alt="">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="img/browsers/ie.png" alt="">
+                                <div>IE (New)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Sorry for the inconvenience!</p>
+            </div>
+        <![endif]-->
+
+        <!-- Javascript -->
+
+        <!-- jQuery -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Waves button ripple effects -->
+        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+
+        <!-- Select 2 - Custom Selects -->
+        <script src="vendors/bower_components/select2/dist/js/select2.full.min.js"></script>
+
+        <!-- Slick Carousel - Custom Alerts -->
+        <script src="vendors/bower_components/slick-carousel/slick/slick.min.js"></script>
+
+        <!-- NoUiSlider -->
+        <script src="vendors/bower_components/nouislider/distribute/nouislider.min.js"></script>
+
+        <!-- IE9 Placeholder -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <!-- Site functions and actions -->
+        <script src="js/app.min.js"></script>
+
+        <!-- Demo only -->
+        <script src="js/demo/demo.js"></script>
+    <script>
+        $('#myCarousel').carousel({
+            interval: 3000
+        })
+    </script>
+    </body>
+</html>

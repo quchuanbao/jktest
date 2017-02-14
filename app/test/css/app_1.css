@@ -5619,6 +5619,31 @@ button.list-group-item-danger.active:focus {
   background-color: #fff;
 }
 
+
+
+
+
+
+.carousel-indicators2 {
+  text-align: center;
+}
+
+.carousel-indicators2 li {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.carousel-indicators2 .active {
+  margin: 0;
+  background-color: #fff;
+}
+
+
+
+
+
 .carousel-caption {
   position: absolute;
   left: 15%;
