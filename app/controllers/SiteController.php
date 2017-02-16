@@ -46,7 +46,7 @@ class SiteController extends CController
 				$adminModel = new linkEmployee();
 				$adminModel->initVar($adminModel);
 				$adminModel->tel = $model->userName;
-				$adminModel->pwd = md5($model->password);
+				//$adminModel->pwd = md5($model->password);
 				$adminModel->departmentId = 4;//录电话
 				$adminModel->positionId = 3;//会籍
 				$userInfo = $adminModel->search();

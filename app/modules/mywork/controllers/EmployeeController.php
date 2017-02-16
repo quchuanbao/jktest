@@ -66,7 +66,7 @@ class EmployeeController extends Controller
 		if (isset($_POST['EmployeeForm'])) {
 			
 		    $model->attributes = $_POST['EmployeeForm'];
-			$model->pwd = '123456';
+			$model->pwd = md5($model->tel);
 			$model->status = 1;
 			$model->cdate = date("Y-m-d H:i:s");
 			
