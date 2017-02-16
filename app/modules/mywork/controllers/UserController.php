@@ -415,7 +415,14 @@ class UserController extends Controller
 							$where.=" and ".$n."='".$v."' ";
 						}
 					} else {
-						$where.=" and ".$fix.".".$n."='".$v."' ";
+						if ($n == 'startDate') {
+							$where.=" and $fix.cdate >='".$v." 00:00:00' ";
+						} elseif ($n == 'endDate'){
+							$where.=" and $fix.cdate <='".$v."  23:59:39' ";
+						} else {
+							$where.=" and ".$fix.".".$n."='".$v."' ";
+
+						}
 					}
 				}
 			}
@@ -488,6 +495,58 @@ class UserController extends Controller
 			$res['res'] = $model->getError('img');
 		}
 		echo json_encode($res);
+	}
+
+
+	public function actionTel()
+	{
+		$data['name'] = "会员表";
+		$model = new UsertelForm();
+		foreach ($model->attributes as $n => $v) {
+			if (!empty($_REQUEST[$n])) {
+				$model->$n = $_REQUEST[$n];
+			}
+		}
+		@$model->attributes = $_POST['UsertelForm'];
+
+		if (empty($model->startDate)) {
+			$model->startDate = date("Y-m-d");
+		}
+		if (empty($model->endDate)) {
+			$model->endDate = date("Y-m-d");
+		}
+
+
+		foreach ($model->attributes as $n => $v) {
+			if(!empty($v)){
+				$pageInfo.=$n."/".$v."/";
+			}
+		}
+		$whereInfo = $this->getSearchInfo($model->attributes);
+
+
+
+		$dataModel = new linkUsertel();
+		$dataModel->initVar($dataModel);
+		@$p = $_GET['page']?$_GET['page']:1;
+		$total = $dataModel->searchCountNum($whereInfo);
+
+		$whereInfo = $this->getSearchInfo($model->attributes,'a');
+
+		$limit = 20;
+		$from = ($p-1)*$limit;
+		$page_nums = 10;
+		@$page = new sdkPage($total,$p,$limit,$page_nums,"/mywork/user/tel/".$pageInfo."page/");
+		$data['page'] = $page->adminShow();
+		$whereInfo.= " order by a.id desc limit $from,$limit";
+
+		$data['info'] = $dataModel->getList($whereInfo);
+
+
+		$data['total'] = $total;
+		$data['model'] = $model;
+		$data['membership'] = $this->getMemberShip(4);
+		$this->render('tellist',$data);
 	}
 	
 	

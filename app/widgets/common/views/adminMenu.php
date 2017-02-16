@@ -38,7 +38,7 @@
                             <a href="#"><i class="glyphicon glyphicon-picture"></i><span> 数据统计</span></a>
                             <ul class="nav nav-pills nav-stacked">
                                 <li><a href="/mywork/total/">会员到店统计</a></li>
-                                
+                                <li><a href="/mywork/user/tel">电话录入统计</a></li>
                             </ul>
                         </li>
 

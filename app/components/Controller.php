@@ -10,8 +10,10 @@ class Controller extends CController
 	public function __construct($id,$module=null)
 	{
 		parent::__construct($id,$module);
-		if (empty(Yii::app()->session['employee'])){
-			$this->redirect('/site');
+		if(empty(Yii::app()->session['employeetel'])) {
+			if (empty(Yii::app()->session['employee'])){
+				$this->redirect('/site');
+			}
 		}
 	}
 	
