@@ -33,7 +33,6 @@ class TelForm extends CFormModel
 		$adminModel->tel = $this->userName;
 		$adminModel->pwd = md5($this->password);
 		$adminModel->departmentId = 4;//
-		$adminModel->positionId = 3;//
 		$userInfo = $adminModel->search();
 		if (empty($userInfo)) {
 			$this->addError('password','用户名或密码错误！');
