@@ -91,11 +91,17 @@ function uploadImage(uid)
 
                 <fieldset>
 					<div class="input-group input-group-lg">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone red"></i></span>
+                        <input class="form-control" placeholder="请输入姓名" name="name" id="name" type="text" maxlength="11" >
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
                         <input class="form-control" placeholder="请输入有效手机号" name="keyword" id="keyword" type="text" maxlength="11" >
 
                     </div>
-
 
                     <div class="clearfix"></div><br>
                     <p class="center col-md-5">
@@ -111,11 +117,23 @@ function uploadImage(uid)
 <script>
     function tel(){
         keyword = $("#keyword").val();
+        name = $("#name").val();
         var reg = /^1[3|4|5|7|8][0-9]{9}$/; //验证规则
+
+        if(name == ''){
+            $("#showsuccess").hide();
+            $("#showerror").show();
+            $("#showerror").html('请填写用户姓名！');
+            $("#keyword").val('');
+            $("#name").val('');
+            return false;
+        }
         if(reg.test(keyword)){//true
-            htmlobj=$.ajax({url:'/tel/search/keyword/'+keyword,async:false});
+            htmlobj=$.ajax({url:'/tel/search/keyword/'+keyword+'/name/'+name,async:false});
             res = htmlobj.responseText;
             info = res.split(",");
+
+
 
             if(info[0] == 2){
                 //正确
@@ -129,11 +147,13 @@ function uploadImage(uid)
                 $("#showerror").html(info[1]);
             }
             $("#keyword").val('');
+            $("#name").val('');
         } else {
             $("#showsuccess").hide();
             $("#showerror").show();
             $("#showerror").html('请输入正确格式手机号！');
             $("#keyword").val('');
+            $("#name").val('');
         }
     }
 

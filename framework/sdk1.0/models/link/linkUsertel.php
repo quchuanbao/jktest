@@ -4,6 +4,7 @@ class linkUsertel extends commonModel{
 	public $id;	//ID    
 	public $tel;	//
 	public $empolyeeId;	//
+	public $name;
 	public $cdate;	//
 	
 	function __construct(&$db = ''){

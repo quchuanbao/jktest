@@ -12,7 +12,7 @@ class TelController extends Controller
 	public function actionSearch()
 	{
 		$keyword = $_REQUEST['keyword'];
-		
+		$name = $_REQUEST['name'];
 		$adminModel = new linkUsertel();
 		$adminModel->initVar($adminModel);
 		$adminModel->tel = $keyword;
@@ -26,6 +26,7 @@ class TelController extends Controller
 		$telModel =  new linkUsertel();
 		$telModel->initVar($telModel);
 		$telModel->tel = $keyword;
+		$telModel->name = $name;
 		$telModel->empolyeeId = Yii::app()->session['employeetel']['id'];
 		$telModel->cdate = date("Y-m-d H:i:s");
 		$telModel->save();

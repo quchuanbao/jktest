@@ -73,7 +73,7 @@
 				<table class="table table-striped table-bordered bootstrap-datatable  responsive">
 				<thead>
 				<tr>
-				<th>ID</th><th>手机号</th><th>录入时间</th><th>会籍</th>
+				<th>ID</th><th>姓名</th><th>手机号</th><th>会籍</th><th>录入时间</th>
 				</tr>
 				</thead>
 				<tbody>
@@ -82,11 +82,10 @@
 						echo '
 							<tr>
 							<td>'.$v['id'].'</td>
+							<td>'.$v['name'].'</td>
 							<td>'.$v['tel'].'</td>
-							<td>'.($v['cdate']).'</td>
-							
-
 							<td>'.$v['memberShipName'].'</td>
+							<td>'.($v['cdate']).'</td>
 
 							</tr>
 						';
