@@ -229,7 +229,7 @@ class sdkPage{
 				<li class="'.$lastClass.'"><a href="'.$page['next_page'].'">下一页 → </a></li>						
 			</ul></div></div></div>';
 		}
-		return $content;
+		return @$content;
 	}
 	
 }

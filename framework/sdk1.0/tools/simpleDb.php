@@ -20,7 +20,7 @@ class simpleDb {
         $host=PM_DB_HOST;
         $user=PM_DB_USER;
         $password=PM_DB_PASSWORD;
-        $dbname=PM_DB_NAME; 
+        $dbname=PM_DB_NAME;
         $this->connect($host,$user,$password,$dbname,$pconnect);
     }
     
@@ -29,48 +29,48 @@ class simpleDb {
 	
 		if($pconnect) {
 			// 建立持久性连接
-			if(!$this->link = @mysql_pconnect($dbhost, $dbuser, $dbpw)) {
+			if(!$this->link = @mysqli_connect($dbhost, $dbuser, $dbpw)) {
 				$this->halt('Can not connect to MySQL server');
 			}
 		} else {
 			// 建立连接
-			if(!$this->link = @mysql_connect($dbhost, $dbuser, $dbpw)) {
+			if(!$this->link = @mysqli_connect($dbhost, $dbuser, $dbpw)) {
 				$this->halt('Can not connect to MySQL server');
 			}
 		}
 		
 		// 通过版本确定要使用的字符集
 		if($this->version() > '4.1') {
-			 $charset=$this->charset;
+			 @$charset=$this->charset;
 			 $dbcharset=$this->dbcharset;
 			if(!$dbcharset && in_array(strtolower($charset), array('gbk', 'big5', 'utf-8'))) {
 				$dbcharset = str_replace('-', '', $charset);
 			}
 
-			if($dbcharset) {
-				mysql_query("SET character_set_connection=$dbcharset, character_set_results=$dbcharset, character_set_client=binary", $this->link);
-			}
 
-			if($this->version() > '5.0.1') {
-				mysql_query("SET sql_mode=''", $this->link);
-			}
+
+
+				mysqli_query($this->link,"SET sql_mode=''" );
+
 		}
+
+		mysqli_query( $this->link,"SET character_set_connection='utf8', character_set_results='utf8', character_set_client=binary");
 		
 		// 如果$dbname不为空，打开指定的数据库
 		if($dbname) {
-			mysql_select_db($dbname, $this->link);
+			mysqli_select_db($this->link,$dbname);
 		}
 
 	}
 	
 	// 打开指定的数据库
 	function select_db($dbname) {
-		return mysql_select_db($dbname, $this->link);
+		return mysqli_select_db($this->link,$dbname);
 	}
 	
 	// 使用mysql_fetch_array()函数迭代结果集
 	function fetch_array($query, $result_type = MYSQL_ASSOC) {
-		return mysql_fetch_array($query, $result_type);
+		return mysqli_fetch_array($query, $result_type);
 	}
 	
 	// $type确定是否缓存查询结果
@@ -85,10 +85,10 @@ class simpleDb {
 		// mysql_query()发送一条 MySQL 查询，查询结果会被缓存
 		
 		// 确定使用缓存查询，还是非缓存查询
-		$func = $type == 'UNBUFFERED' && @function_exists('mysql_unbuffered_query') ? 'mysql_unbuffered_query' : 'mysql_query';
+		$func = $type == 'UNBUFFERED' && @function_exists('mysql_unbuffered_query') ? 'mysql_unbuffered_query' : 'mysqli_query';
 		
 		// 执行查询
-		if(!($query = $func($sql, $this->link)) && $type != 'SILENT') {
+		if(!($query = $func($this->link,$sql )) && $type != 'SILENT') {
 			$this->transactionFlag = 'error';
 			$this->halt('MySQL Query Error: ', $sql);
 		}
@@ -102,7 +102,7 @@ class simpleDb {
 	
 	// 执行查询，并返回数组
 	// $type ＝ MYSQL_ASSOC 只得到关联索引
-	function query_array($sql,$unbuffered = "UNBUFFERED",$type = MYSQL_ASSOC) {
+	function query_array($sql,$unbuffered = "UNBUFFERED",$type = MYSQLI_BOTH) {
 		 
 		$res = $this->query($sql, $unbuffered);
         //$sql 为update、insert、delete
@@ -110,7 +110,7 @@ class simpleDb {
 		
 		
         $d = array();
-        while($row = mysql_fetch_array($res, $type)) {
+        while($row = mysqli_fetch_array($res, $type)) {
             // $d[]中存储了结果集中每一行数据
             // 可以这样取得行中的数据$d[0]['key']
         	$d[] = $row;
@@ -175,23 +175,23 @@ class simpleDb {
 	
 	// 取得前一次 MySQL 操作所影响的记录行数
 	function affected_rows() {
-		return mysql_affected_rows($this->link);
+		return mysqli_affected_rows($this->link);
 	}
 	
 	// 返回上一个 MySQL 操作产生的文本错误信息
 	function error() {
-		return (($this->link) ? mysql_error($this->link) : mysql_error());
+		return (($this->link) ? mysqli_error($this->link) : mysqli_error());
 	}
 	
 	// 返回上一个 MySQL 操作中的错误信息的数字编码
 	// intval()获取变量的整数值
 	function errno() {
-		return intval(($this->link) ? mysql_errno($this->link) : mysql_errno());
+		return intval(($this->link) ? mysqli_errno($this->link) : mysqli_errno());
 	}
 	
 	// 取得结果数据，$row指定行数
 	function result($query, $row) {
-		$query = @mysql_result($query, $row);
+		$query = @mysqli_result($query, $row);
 		return $query;
 	}
 	
@@ -203,39 +203,40 @@ class simpleDb {
 	
 	// 取得结果集中字段的数目
 	function num_fields($query) {
-		return mysql_num_fields($query);
+		return mysqli_num_fields($query);
 	}
 	
 	// 释放结果集
 	function free_result($query) {
-		return mysql_free_result($query);
+		return mysqli_free_result($query);
 	}
 	
 	// 返回插入记录ID
 	// mysql_insert_id()取得上一步 INSERT 操作产生的 ID
 	function insert_id() {
-		return ($id = mysql_insert_id($this->link)) >= 0 ? $id : $this->result($this->query("SELECT last_insert_id()"), 0);
+		return ($id = mysqli_insert_id($this->link)) >= 0 ? $id : $this->result($this->query("SELECT last_insert_id()"), 0);
 	}
 	
 	// 使用mysql_fetch_row函数迭代结果集
 	function fetch_row($query) {
-		$query = mysql_fetch_row($query);
+		$query = mysqli_fetch_row($query);
 		return $query;
 	}
 	
 	// 使用迭代mysql_fetch_field()函数迭代结果集
 	function fetch_fields($query) {
-		return mysql_fetch_field($query);
+		return mysqli_fetch_field($query);
 	}
 	
 	// 获得mysql版本号
 	function version() {
-		return mysql_get_server_info($this->link);
+		//return mysql_get_server_info($this->link);
+		return '5.0.12';
 	}
 	
 	// 关闭连接
 	function close() {
-		return mysql_close($this->link);
+		return mysqli_close($this->link);
 	}
 
 
@@ -261,15 +262,15 @@ class simpleDb {
 	
 	//开始事务
 	function transactionStart(){
-		mysql_query("BEGIN");
+		mysqli_query("BEGIN");
 	}
 	
 	//结束事务
 	function transactionEnd(){
 		if ($this->transactionFlag == 'error'){
-			mysql_query("ROLLBACK");
+			mysqli_query("ROLLBACK");
 		} else {
-			mysql_query("COMMIT");
+			mysqli_query("COMMIT");
 		}
 	}
 }

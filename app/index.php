@@ -1,10 +1,10 @@
 <?php
 date_default_timezone_set("Asia/Shanghai");
-$token = $_REQUEST['token'];
-if ($token) {
-	session_id($token);
-	session_start();
-}
+//$token = $_REQUEST['token'];
+//if ($token) {
+//	session_id($token);
+//	session_start();
+//}
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../framework/yii.php';
 $config=dirname(__FILE__).'/config/main.php';
